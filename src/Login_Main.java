@@ -71,7 +71,7 @@ public class Login_Main {
                     String enteredId = inputid.getText();
                     String enteredPw = new String(inputpw.getPassword());
 
-                    try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bulletin_board", "root", "hordes0707");
+                    try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bulletin_board", "root", "password");
                          PreparedStatement pstmt = conn.prepareStatement("SELECT name FROM users WHERE id = ? AND pw = ?")) {
 
                         pstmt.setString(1, enteredId);
