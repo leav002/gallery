@@ -362,7 +362,7 @@ public class Gall_Main {
     private Connection connect() throws SQLException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/bulletin_board", "root", "hordes0707");
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/bulletin_board", "root", "password");
         } catch (ClassNotFoundException | SQLException ex) {
             ex.printStackTrace();
             throw new SQLException("DB 연결 실패");
